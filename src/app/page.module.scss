@@ -1,0 +1,78 @@
+// src/app/page.module.scss
+
+.homeContainer {
+  min-height: 100vh;
+  /* ใช้แค่ 2 สีตามที่บอกเป๊ะ ๆ */
+  background: linear-gradient(135deg, #6EDA78 0%, #FFA200 100%);
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.testCard {
+  width: 340px;
+  height: 180px;
+  border-radius: 20px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  transition: all 0.35s ease;
+  cursor: pointer;
+  text-align: center;
+  padding: 36px 24px;
+
+  &:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+  }
+
+  &:active {
+    transform: translateY(-10px);
+  }
+}
+
+.cardTitle {
+  font-size: 34px;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.cardSubtitle {
+  font-size: 19px;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .testCard {
+    width: 300px;
+    height: 170px;
+  }
+  .cardTitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .testCard {
+    width: 90%;
+    max-width: 380px;
+  }
+}
